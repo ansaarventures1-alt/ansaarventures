@@ -1,0 +1,14 @@
+# Python dependencies for LLM Auto-Installer
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+requests>=2.31.0
+pyyaml>=6.0.1
+tqdm>=4.66.0
+
+# Optional: For API usage
+ollama>=0.1.0
+
+# Optional: For advanced features
+python-dotenv>=1.0.0
+colorama>=0.4.6

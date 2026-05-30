@@ -1,0 +1,85 @@
+# LLM Auto-Installer Configuration
+# Edit this file to customize installation behavior
+
+# Model storage location
+# Default: C:\Users\[YourUsername]\.ollama\models (Windows)
+# You can set a custom path here:
+model_storage:
+  # path: "D:/LLM_Models"  # Uncomment and modify to use custom storage
+  path: null  # null = use default Ollama location
+
+# Models to install
+# Comment out any models you don't want to download
+models:
+  - name: "llama2"
+    display: "Llama 2 (7B)"
+    enabled: true
+    size_gb: 3.8
+  
+  - name: "mistral"
+    display: "Mistral (7B)"
+    enabled: true
+    size_gb: 4.1
+  
+  - name: "phi"
+    display: "Phi-3 Mini (3.8B)"
+    enabled: true
+    size_gb: 2.3
+  
+  - name: "gemma:7b"
+    display: "Gemma (7B)"
+    enabled: true
+    size_gb: 5.0
+  
+  - name: "neural-chat"
+    display: "Neural Chat (7B)"
+    enabled: true
+    size_gb: 4.0
+  
+  - name: "dolphin-mixtral"
+    display: "Dolphin Mixtral (47B)"
+    enabled: false  # Disabled by default (requires 27GB)
+    size_gb: 27
+
+# Installation settings
+installation:
+  # Skip Ollama installation (if already installed)
+  skip_ollama: false
+  
+  # Skip model downloads (only install Ollama)
+  skip_models: false
+  
+  # Maximum parallel downloads
+  max_parallel: 1
+  
+  # Timeout per model download (in seconds)
+  download_timeout: 3600
+
+# Ollama server settings
+ollama_server:
+  # Default host and port for Ollama API
+  host: "127.0.0.1"
+  port: 11434
+  
+  # Auto-start Ollama server after installation
+  auto_start: true
+
+# Logging
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  
+  # Save logs to file
+  save_logs: true
+  log_file: "installation.log"
+
+# Hardware detection
+hardware:
+  # Auto-detect and optimize for hardware
+  auto_detect: true
+  
+  # Minimum disk space required (in GB)
+  min_disk_space: 150
+  
+  # Recommended RAM (in GB)
+  recommended_ram: 16
